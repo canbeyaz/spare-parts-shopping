@@ -5,4 +5,4 @@
 *.xml linguist-detectable=false 
 *.asm linguist-detectable=false
 *.css linguist-detectable=false
-*.htm linguist-vendored
+*.htm linguist-detectable=false
