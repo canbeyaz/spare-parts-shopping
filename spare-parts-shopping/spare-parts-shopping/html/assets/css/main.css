@@ -1,0 +1,221 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: white;
+    font-family: Plus Jakarta Sans;
+}
+header {
+    background-color: white;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+header a {
+    color: white;
+}
+
+header .header__top {
+    height: 120px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 50px;
+}
+
+header .header__bottom {
+    height: 80px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top:2px solid silver;
+}
+.header__bottom a{
+    padding: 15px;
+    color:black;
+}
+.footer {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin:15px 0;
+}
+
+.login {
+    width: 538px;
+    background-color: orange;
+    border-radius: 26px;
+    border: 1px solid #D6D6D6;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 60px 40px;
+}
+
+.login__title {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    font-style: normal;
+    line-height: normal;
+    margin-bottom: 45px;
+}
+
+.login__title span:nth-child(1){
+    font-size: 30px;
+    font-weight: 600;
+}
+.login__title span:nth-child(2){
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.login__inputs {
+    margin-bottom: 45px;
+}
+
+.login__inputs input{
+    width: 95%;
+    height: 66px;
+    border-radius: 10px;
+    border: 1px solid #EAEAEA;
+    background: #FFF;
+    box-shadow: 0px 10px 40px 0px rgba(174, 174, 174, 0.20);
+    padding-left: 25px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login__inputs input::placeholder {
+    color: #B0A9A9;
+    opacity: 1; /* Firefox */
+}
+  
+.login__inputs input::-ms-input-placeholder { /* Edge 12 -18 */
+    color: #B0A9A9;
+}
+
+.login__buttons {
+    display: flex;
+    flex-direction: column;
+}
+.login__buttons button{
+    width: 100%;
+    height: 66px;
+    color: white;
+    margin-bottom: 45px;
+    border-radius: 10px;
+    border: 1px solid #EAEAEA;
+    background: #000000;
+    box-shadow: 0px 10px 40px 0px rgba(174, 174, 174, 0.20);
+    cursor: pointer;
+}
+
+.login__buttons button:hover {
+    background-color: rgb(82, 82, 82);
+}
+
+.login__buttons a {
+    text-align: center;
+    color: #333;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.login__buttons a:hover {
+    color: gray;
+}
+
+.top__social-links {
+    display: flex;
+}
+.top__social-links a {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.top__logo {
+    width: 150px;
+}
+.top__logo img{
+    width: 100%;
+    background-size: cover;    
+}
+
+.top__user-information {
+    
+}
+.top__user-information a {
+    color: black;
+    margin-left: 20px;
+}
+
+.footer {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer__logo {
+    display: flex;
+    width: 150px;
+}
+
+.footer_logo img {
+    width: 150px;
+    display: flex;
+    background-size: cover;
+}
+
+.footer__menu {
+    margin: 20px 0;
+    display: flex;
+}
+
+.footer__menu a {
+    padding: 15px;
+    color: black;
+}
+.footer__social-links {
+    margin: 0 0 20px 0;
+    display: flex;
+}
+
+.footer__social-links a {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 15px;
+    text-decoration: none;
+    color: white;
+}
+.footer__copyright-text {
+
+}

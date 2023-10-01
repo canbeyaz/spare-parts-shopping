@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="header__top">
+            <div class="top__social-links">
+                <a href="#"><i class="fa-brands fa-twitter"></i> </a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i> </a>
+
+            </div>
+            <div class="top__logo">
+                <a href="/">
+                    <img src="~/assets/img/logo2.gif">
+                </a>
+            </div>
+            <div class="top__user-information">
+                <span>User Information</span>
+                <a href="#">Sepet (0)</a>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <a href="/Login/Login">Login</a>
+            <a href="/Login/Signup">Signup</a>
+            
+        </div>
+    </header>
+    <div class="container">
+       @RenderBody()
+    </div>
+    <div class="footer">
+        <div class="footer__logo">
+            <img src="~/assets/img/logo2.gif" width="150">
+        </div>
+        <div class="footer__menu">
+            <a href="#">About</a>
+            <a href="#">About</a>
+            <a href="#">About</a>
+            <a href="#">About</a>
+        </div>
+        <div class="footer__social-links">
+            <a href="#"><i class="fa-brands fa-twitter"></i> </a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i> </a>
+        </div>
+        <div class="footer__line">
+
+        </div>
+        <span class="footer__copyright-text">
+            Copyright © Hasan Can Beyaz 2023
+        </span>
+    </div>
+</body>
+</html>
