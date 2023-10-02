@@ -1,5 +1,33 @@
-﻿@{
+﻿@model List<spare_parts_shopping.Models.Product>
+@{
     ViewBag.Title = "Home Page";
 }
 
-<h1></h1>
+@*@if (Model != null)
+{
+
+    <h1>@Model.Username Hoşgeldiniz!</h1>
+    <h1>@Model.Mail</h1>
+}
+else
+{
+    <h1>Hoşgeldiniz!</h1>
+}*@
+
+<h1>ÜRÜNLER</h1>
+<div class="products">
+    @foreach (var item in Model)
+    {
+        <a href="/products/productdetail/@item.Id" class="product__item">
+            <div class="product__image">
+                <img src="@item.Image" />
+            </div>
+            <div class="product__title">
+                <span>@item.Name</span>
+            </div>
+            <div class="product__price">
+                <span>@item.Price TL</span>
+            </div>
+        </a>
+    }
+</div>

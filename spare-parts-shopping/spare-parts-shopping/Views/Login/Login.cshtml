@@ -4,17 +4,20 @@
 }
 
 <div class="login">
-    <div class="login__title">
-        <span>Login</span>
-        <span>to get started</span>
-    </div>
-    <div class="login__inputs">
-        <input type="text" value="" placeholder="Username" />
-        <input type="password" value="" placeholder="Password" />
-    </div>
-    <div class="login__buttons">
-        <button type="submit">Continue</button>
-        <a href="#">New User? <b>Register</b></button>
-    </div>
+    <form action="/login/login" method="post">
+        <div class="login__title">
+            <span>Login</span>
+            <span>to get started</span>
+        </div>
+        <div class="login__inputs">
+            <input name="username" id="username" type="text" value="" placeholder="Username" />
+            <input name="password" id="password" type="password" value="" placeholder="Password" />
+        </div>
+        <div class="login__buttons">
+            <button type="submit">Continue</button>
+            <a href="#">New User? <b>Register</b></a>
+        </div>
+    </form>
+    
 </div>
 

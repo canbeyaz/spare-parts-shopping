@@ -1,0 +1,15 @@
+﻿@model spare_parts_shopping.Models.Product
+@{
+    ViewBag.Title = "ProductDetail";
+}
+
+<div class="product__detail">
+    <h1 class="detail__title">@Model.Name</h1>
+    <div class="detail__image">
+        <img src="@Model.Image">
+    </div>
+
+    <span class="detail__stock">Stok : @Model.Stock Adet</span>
+    <span class="detail__price">Ücret : @Model.Price TL</span>
+    <button type="submit" class="detail__submit">Sepete Ekle</button>
+</div>

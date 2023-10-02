@@ -1,0 +1,18 @@
+﻿@model List<spare_parts_shopping.Models.Orders>
+@{
+    ViewBag.Title = "ProductOrders";
+    var newModel = Model.GroupBy(x => x.ProductId);
+}
+
+<h2>ProductOrders</h2>
+
+@foreach (var item in Model)
+{
+    <div style="display: flex;">
+        <h1>Id : @item.Products.Id</h1>
+        <h1>Ürün Adı : @item.Products.Name</h1>
+        <img width="100" src="@item.Products.Image">
+        <h1>Ücret :  @(item.Products.Price * item.Quantity)</h1>
+        <span>-------------------------------------------------</span>
+    </div>
+}

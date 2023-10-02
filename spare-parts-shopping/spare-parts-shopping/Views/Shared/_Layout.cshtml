@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var userModel = (spare_parts_shopping.Models.Users)Session["user"];
+}
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -28,18 +31,26 @@
                 </a>
             </div>
             <div class="top__user-information">
-                <span>User Information</span>
+                @if (userModel != null)
+                {
+                    <span>Hoşgeldin, @userModel.Username</span>
+                }
+                else
+                {
+                    <a href="/login/login">Giriş Yap!</a>
+                }
                 <a href="#">Sepet (0)</a>
             </div>
         </div>
         <div class="header__bottom">
             <a href="/Login/Login">Login</a>
             <a href="/Login/Signup">Signup</a>
-            
+            <a href="/products/productorders">orders</a>
+
         </div>
     </header>
     <div class="container">
-       @RenderBody()
+        @RenderBody()
     </div>
     <div class="footer">
         <div class="footer__logo">

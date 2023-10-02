@@ -1,4 +1,5 @@
-﻿using System;
+﻿using spare_parts_shopping.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,11 @@ namespace spare_parts_shopping.Controllers
 {
     public class HomeController : Controller
     {
+        SparePartsDbModel db = new SparePartsDbModel();
         public ActionResult Index()
         {
-            return View();
+            var products = db.Products.ToList();
+            return View(products);
         }
 
         public ActionResult About()
