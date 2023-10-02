@@ -39,7 +39,11 @@
                 {
                     <a href="/login/login">Giriş Yap!</a>
                 }
-                <a href="#">Sepet (0)</a>
+                @if (userModel?.BasketItems != null)
+                {
+                    <a href="#">Sepet (@userModel.BasketItems)</a>
+                }
+
             </div>
         </div>
         <div class="header__bottom">

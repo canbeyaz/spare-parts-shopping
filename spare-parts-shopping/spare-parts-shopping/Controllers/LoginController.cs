@@ -26,6 +26,8 @@ namespace spare_parts_shopping.Controllers
             {
                 return View();
             }
+            int count = db.Orders.Where(x => x.UserId == model.Id).Count();
+            model.BasketItems = count;
             Session["user"] = model;
             return RedirectToAction("Index","Home", model);
         }

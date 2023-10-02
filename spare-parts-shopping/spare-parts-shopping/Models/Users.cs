@@ -12,6 +12,7 @@ namespace spare_parts_shopping.Models
         public string Mail { get; set; }
         public string Username { get; set; }
         public string Password{ get; set; }
+        public int? BasketItems { get; set; }
         public DateTime? CreateDate{ get; set; }
     }
 }
