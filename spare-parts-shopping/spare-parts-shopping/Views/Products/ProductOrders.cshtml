@@ -2,6 +2,13 @@
 @{
     ViewBag.Title = "ProductOrders";
     var newModel = Model.GroupBy(x => x.ProductId);
+    decimal totalOrderPrice = 0;
+    foreach (var item in Model)
+    {
+        var singleProductTotalPrice = item.Products.Price * item.Quantity;
+        totalOrderPrice += singleProductTotalPrice;
+    }
+
 }
 
 
@@ -27,6 +34,11 @@
                 <div class="product__price">
                     <span>x @item.Quantity = @(item.Products.Price * item.Quantity) TL</span>
                 </div>
+                @if (item.StockError)
+                {
+                    <span class="product__error-stock">Bu üründen maksimum @item.Products.Stock adet alabilirsiniz.</span>
+                }
+
             </div>
             <div class="order__right">
                 <div class="order__buttons">
@@ -37,4 +49,16 @@
             </div>
         </div>
     }
+    @if (Model.Count > 0)
+    {
+        <div class="order__summary">
+            <span>Toplam : <b>@(totalOrderPrice) TL</b></span>
+            
+        </div>
+        <div class="order__summary">
+            <a href="/payment/stockCheck">Ödeme Yap</a>
+        </div>
+        
+    }
+
 </div>

@@ -32,7 +32,7 @@
                 </a>
             </div>
             <div class="top__user-information">
-                @if (userModel != null)
+                @if (userModel != null && userModel.Id != 0)
                 {
                     <span>Hoşgeldin, @userModel.Username</span>
                 }
@@ -40,10 +40,9 @@
                 {
                     <a href="/login/login">Giriş Yap!</a>
                 }
-                @if (userModel?.BasketItems != null)
-                {
-                    <a href="#">Sepet (@userModel.BasketItems.Sum(x => x.Quantity))</a>
-                }
+
+                <a href="/products/productorders">Sepet (@(userModel == null ? "0" : userModel.BasketItems.Sum(x => x.Quantity).ToString()))</a>
+
 
             </div>
         </div>

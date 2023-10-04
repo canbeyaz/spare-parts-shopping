@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spare-parts-shopping", "spare-parts-shopping\spare-parts-shopping.csproj", "{D9731DEF-61A6-443B-AC7C-0D314682407C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spare-parts-shopping.API", "spare-parts-shopping.API\spare-parts-shopping.API.csproj", "{E3B264B3-4E82-489A-BD66-A6F7300C0680}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spare-parts-shopping.WinForm", "spare-parts-shopping.WinForm\spare-parts-shopping.WinForm.csproj", "{94C887CF-6462-4A39-B9C3-E88BBA83CA3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D9731DEF-61A6-443B-AC7C-0D314682407C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9731DEF-61A6-443B-AC7C-0D314682407C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9731DEF-61A6-443B-AC7C-0D314682407C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3B264B3-4E82-489A-BD66-A6F7300C0680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3B264B3-4E82-489A-BD66-A6F7300C0680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3B264B3-4E82-489A-BD66-A6F7300C0680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3B264B3-4E82-489A-BD66-A6F7300C0680}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94C887CF-6462-4A39-B9C3-E88BBA83CA3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94C887CF-6462-4A39-B9C3-E88BBA83CA3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94C887CF-6462-4A39-B9C3-E88BBA83CA3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94C887CF-6462-4A39-B9C3-E88BBA83CA3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,26 @@
+﻿@model List<spare_parts_shopping.Models.Orders>
+@{
+    ViewBag.Title = "Index";
+    decimal totalOrderPrice = 0;
+    foreach (var item in Model)
+    {
+        var singleProductTotalPrice = item.Products.Price * item.Quantity;
+        totalOrderPrice += singleProductTotalPrice;
+    }
+}
+<div class="login">
+    <div class="login__title">
+        <span>ÖDEME</span>
+    </div>
+    <div class="login__inputs">
+        <input type="text" value="" placeholder="Kart No" />
+        <input type="text" value="" placeholder="Kart Sahibi" />
+        <div class="single-row">
+            <input type="text" value="" placeholder="Son Kullanma Tarihi Ay" />/
+            <input type="text" value="" placeholder="Son Kullanma Tarihi Yıl" />
+        </div>
+
+        <input type="text" value="" placeholder="Cvv" />
+        <span class="payment-price">Ödenecek Tutar : &nbsp;&nbsp; <b>@totalOrderPrice TL</b></span>
+    </div>
+</div>

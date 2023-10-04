@@ -11,5 +11,5 @@
 
     <span class="detail__stock">Stok : @Model.Stock Adet</span>
     <span class="detail__price">Ücret : @Model.Price TL</span>
-    <button type="submit" class="detail__submit">Sepete Ekle</button>
+    <a href="/Products/ProductAddItem?productId=@Model.Id" class="detail__submit">Sepete Ekle</a>
 </div>

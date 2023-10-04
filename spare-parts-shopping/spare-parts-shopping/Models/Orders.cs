@@ -13,6 +13,8 @@ namespace spare_parts_shopping.Models
         public int UserId { get; set; }
         public int ProductId { get; set; }
         public int Quantity { get; set; }
+        [NotMapped]
+        public bool StockError { get; set; }
         public bool IsPayment { get; set; }
         [ForeignKey("UserId")]
         public virtual Users User { get; set; }
