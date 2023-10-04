@@ -28,6 +28,7 @@
             <div class="top__logo">
                 <a href="/">
                     <img src="~/assets/img/logo2.gif">
+
                 </a>
             </div>
             <div class="top__user-information">
@@ -41,7 +42,7 @@
                 }
                 @if (userModel?.BasketItems != null)
                 {
-                    <a href="#">Sepet (@userModel.BasketItems)</a>
+                    <a href="#">Sepet (@userModel.BasketItems.Sum(x => x.Quantity))</a>
                 }
 
             </div>

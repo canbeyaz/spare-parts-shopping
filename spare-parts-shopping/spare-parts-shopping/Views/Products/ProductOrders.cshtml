@@ -4,15 +4,37 @@
     var newModel = Model.GroupBy(x => x.ProductId);
 }
 
-<h2>ProductOrders</h2>
 
-@foreach (var item in Model)
-{
-    <div style="display: flex;">
-        <h1>Id : @item.Products.Id</h1>
-        <h1>Ürün Adı : @item.Products.Name</h1>
-        <img width="100" src="@item.Products.Image">
-        <h1>Ücret :  @(item.Products.Price * item.Quantity)</h1>
-        <span>-------------------------------------------------</span>
-    </div>
-}
+
+
+<h1>Sepet</h1>
+<div class="orders">
+    @foreach (var item in Model)
+    {
+        <div class="order__item">
+            <div class="order__left">
+                <div class="order__image">
+                    <img src="@item.Products.Image" />
+                </div>
+                <div class="order__information">
+                    <div class="product__title">
+                        <span>@item.Products.Id - @item.Products.Name</span>
+                    </div>
+                    <div class="product__price">
+                        <span>@item.Products.Price TL</span>
+                    </div>
+                </div>
+                <div class="product__price">
+                    <span>x @item.Quantity = @(item.Products.Price * item.Quantity) TL</span>
+                </div>
+            </div>
+            <div class="order__right">
+                <div class="order__buttons">
+                    <a href="/products/ProductIncrease?productId=@item.Products.Id">+</a>
+                    <a href="/products/ProductDecrease?productId=@item.Products.Id">-</a>
+
+                </div>
+            </div>
+        </div>
+    }
+</div>

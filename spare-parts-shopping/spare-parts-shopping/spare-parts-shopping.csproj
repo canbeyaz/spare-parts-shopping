@@ -183,6 +183,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Login\Signup.cshtml" />
     <Content Include="Views\Home\Products.cshtml" />
+    <Content Include="Views\Products\ProductAdd.cshtml" />
+    <Content Include="Views\Products\ProductDetail.cshtml" />
+    <Content Include="Views\Products\ProductOrders.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
