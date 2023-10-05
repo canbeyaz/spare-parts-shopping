@@ -12,15 +12,26 @@
     <div class="login__title">
         <span>ÖDEME</span>
     </div>
-    <div class="login__inputs">
-        <input type="text" value="" placeholder="Kart No" />
-        <input type="text" value="" placeholder="Kart Sahibi" />
-        <div class="single-row">
-            <input type="text" value="" placeholder="Son Kullanma Tarihi Ay" />/
-            <input type="text" value="" placeholder="Son Kullanma Tarihi Yıl" />
-        </div>
+    <form action="" >
+        <div class="login__inputs">
+            <form>
+                <input name="CardNo" id="CardNo" type="text" value="" placeholder="Kart No" />
+                <input name="CardName" id="CardName" type="text" value="" placeholder="Kart Sahibi" />
+                <div class="single-row">
+                    <input name="CardMonth" id="CardMonth" type="text" value="" placeholder="Son Kullanma Tarihi Ay" />/
+                    <input name="CardYear" id="CardYear" type="text" value="" placeholder="Son Kullanma Tarihi Yıl" />
+                </div>
 
-        <input type="text" value="" placeholder="Cvv" />
-        <span class="payment-price">Ödenecek Tutar : &nbsp;&nbsp; <b>@totalOrderPrice TL</b></span>
-    </div>
+                <input name="CardCvv" id="CardCvv" type="text" value="" placeholder="Cvv" />
+                <input type="hidden" name="Price" id="Price" value="@totalOrderPrice" />
+                <span class="payment-price">Ödenecek Tutar : &nbsp;&nbsp; <b>@totalOrderPrice TL</b></span>
+                <span class="error-message">Error! Tekrar Deneyin!</span>
+                <span class="success-message">Başarılı!</span>
+                <button type="submit" id="payment" class="payment-button">Ödeme Yap</button>
+            </form>
+        </div>
+    </form>
 </div>
+
+
+

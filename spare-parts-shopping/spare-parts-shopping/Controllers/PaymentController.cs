@@ -23,7 +23,7 @@ namespace spare_parts_shopping.Controllers
         public ActionResult StockCheck()
         {
             var user = (Users)Session["user"];
-            if(user != null)
+            if (user != null)
             {
                 foreach (var item in user.BasketItems)
                 {
@@ -32,8 +32,8 @@ namespace spare_parts_shopping.Controllers
                 }
                 Session["user"] = user;
             }
-            
-            if(user.BasketItems.Any(x => x.StockError == true))
+
+            if (user.BasketItems.Any(x => x.StockError == true))
             {
                 return RedirectToAction("ProductOrders", "Products");
             }
@@ -46,6 +46,20 @@ namespace spare_parts_shopping.Controllers
         public ActionResult PaymentCheck(int statusId)
         {
             return View(statusId);
+        }
+
+        public void SuccessPaymentStockDecrease()
+        {
+            var user = (Users)Session["user"];
+
+            foreach (var item in user.BasketItems)
+            {
+                if (db.Products.FirstOrDefault(x => x.Id == item.ProductId) != null)
+                {
+                    db.Products.FirstOrDefault(x => x.Id == item.ProductId).Stock -= item.Quantity;
+                    db.SaveChanges();
+                }
+            }
         }
     }
 }

@@ -41,7 +41,7 @@
                     <a href="/login/login">Giriş Yap!</a>
                 }
 
-                <a href="/products/productorders">Sepet (@(userModel == null ? "0" : userModel.BasketItems.Sum(x => x.Quantity).ToString()))</a>
+                <a href="/products/productorders">Sepet (@(userModel == null ? "0" : userModel.BasketItems.Where(x => x.Products != null).Sum(x => x.Quantity).ToString()))</a>
 
 
             </div>
@@ -78,5 +78,67 @@
             Copyright © Hasan Can Beyaz 2023
         </span>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/3.2.1/jquery.serializejson.min.js" integrity="sha512-SdWDXwOhhVS/wWMRlwz3wZu3O5e4lm2/vKK3oD0E5slvGFg/swCYyZmts7+6si8WeJYIUsTrT3KZWWCknSopjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+            $("#payment").click(function () {
+                $(".error-message").hide();
+                $(".success-message").hide();
+                let postData = $('form').serializeJSON();
+                console.log(postData);
+                event.preventDefault();
+                $.ajax({
+                    url: 'https://localhost:44333/api/payment/post',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: postData,
+                    success: function (gelenveri) {
+                        
+                        if (gelenveri == "200") {
+                            $(".success-message").show();
+                            successPayment();
+                        }
+                        if (gelenveri == "100") {
+                            $(".error-message").show();
+                        }
+                        if (gelenveri == "101") {
+                            $(".error-message").show();
+                        }
+                        if (gelenveri == "102") {
+                            $(".error-message").show();
+                        }
+                        if (gelenveri == "103") {
+                            $(".error-message").show();
+                        }
+                        if (gelenveri == "104") {
+                            $(".error-message").show();
+                        }
+                        if (gelenveri == "105") {
+                            $(".error-message").show();
+                        }
+                        if (gelenveri == "Error!") {
+                            $(".error-message").show();
+                        }
+                    },
+                    error: function (hata) {
+                        $(".error-message").show();
+                        
+                    }
+                });
+            });
+        });
+
+        function successPayment() {
+            $.ajax({
+                url: '/payment/SuccessPaymentStockDecrease',
+                type: 'GET',
+                dataType: 'json',
+            });
+        }
+    </script>
 </body>
 </html>
