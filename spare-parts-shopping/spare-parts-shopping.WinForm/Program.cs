@@ -16,7 +16,7 @@ namespace spare_parts_shopping.WinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UrunEkle());
+            Application.Run(new Giris());
         }
     }
 }
